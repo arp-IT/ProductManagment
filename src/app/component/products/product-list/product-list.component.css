@@ -1,0 +1,21 @@
+.cardBg{
+    background: #428bca;
+    color:#fff;
+    font-size: 18px;
+}
+
+.individualProds
+{
+    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+}
+
+.prodPrice{
+    float: right;
+}
+
+.activeProd {
+    background-color: #428bca !important;
+  }

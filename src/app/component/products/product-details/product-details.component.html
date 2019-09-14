@@ -1,0 +1,46 @@
+<div class="card">
+  <app-product-count></app-product-count>
+    <div class="card-header cardBg">Product Details <span class="productHeadInfo">{{productInfo.name}}(Product ID-{{productInfo.id}})</span></div>
+    <div class="card-body">
+      <form [formGroup]="productForm">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control"  formControlName="name" [value]="productInfo.name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">Product Name is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Price</label>
+            <input type="number" class="form-control"  formControlName="price" [value]=" productInfo.price"  [ngClass]="{ 'is-invalid': submitted && f.price.errors }">
+            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                <div *ngIf="f.price.errors.required">Product Price is required</div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="card">
+                <div class="card-header cardBg">Rating</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="number" class="form-control" formControlName="rating" [value]="productInfo.rating" [ngClass]="{ 'is-invalid': submitted && f.rating.errors }">
+                        <div *ngIf="submitted && f.rating.errors" class="invalid-feedback">
+                            <div *ngIf="f.rating.errors.required">Product Rating is required</div>
+                            <div *ngIf="f.rating.errors.min">Product Rating must be at min 1</div>
+                            <div *ngIf="f.rating.errors.max">Product Rating must be at max 10</div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+      </form>
+    </div>
+
+    <div class="actionDiv">
+     <button type="button" class="btn btn-primary actionBtn" (click)="AddProduct()">Add</button>
+     <button type="button" class="btn btn-success actionBtn" (click)="UpdateProduct()">Save</button>
+     <button type="button" class="btn btn-danger actionBtn" (click)="DeleteProduct()">Delete</button>
+     <button type="button" class="btn btn-warning actionBtn">Cancel</button>
+    </div>
+  </div>

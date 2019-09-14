@@ -1,0 +1,21 @@
+<div class="productDiv">
+<nav class="navbar navbar-primary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand textColor">Product Manager</span>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><span class="logout textColor" (click)="logOut()">Logout</span></li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="row productInfo">
+    <div class="col-sm-4">
+       <app-product-list></app-product-list>
+    </div>
+    <div class="col-sm-8">
+        <app-product-details></app-product-details>
+    </div>
+  </div>
+</div>

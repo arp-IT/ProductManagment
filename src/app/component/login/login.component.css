@@ -1,0 +1,10 @@
+.loginForm
+{
+    margin-top: 5%;
+}
+
+.errorMsg
+{
+    color:red;
+    float: right;
+}

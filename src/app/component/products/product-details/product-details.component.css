@@ -1,0 +1,19 @@
+.cardBg{
+    background: #428bca;
+    color:#fff;
+    font-size: 18px;
+}
+
+.actionDiv{
+    text-align: right;
+    margin-bottom: 15px;
+    background: #efebeb;
+}
+
+.actionBtn{
+    margin-right: 4px;
+}
+
+.productHeadInfo{
+    float: right;
+}

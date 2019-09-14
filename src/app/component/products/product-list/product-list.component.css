@@ -19,3 +19,12 @@
 .activeProd {
     background-color: #428bca !important;
   }
+
+  .activeProdSpan{
+      color:#fff !important;
+      font-weight: bold;
+  }
+
+  .individualProdSpan{
+      color:black;
+  }

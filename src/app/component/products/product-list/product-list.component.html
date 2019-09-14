@@ -2,6 +2,6 @@
     <div class="card-header cardBg">Products</div>
     <div class="card-body">
       <div *ngFor="let productListItem of productList;let i = index" class="individualProds" [class.activeProd]="i == selectedRow" (click)="setSelecetdProduct(productListItem,i)">
-        <span>{{productListItem.name}}</span> <span class="prodPrice">{{productListItem.price | currency:'USD' }}</span>
+        <span class="individualProdSpan" [class.activeProdSpan]="i == selectedRow">{{productListItem.name}}</span> <span class="individualProdSpan prodPrice" [class.activeProdSpan]="i == selectedRow">{{productListItem.price | currency:'USD' }}</span>
       </div>
   </div>
